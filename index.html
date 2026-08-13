@@ -20,3 +20,85 @@
 </body>
 
 </html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade Visual na Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo principal</a>
+
+    <header>
+        <div class="container">
+            <h1>Acessibilidade Visual</h1>
+            <nav aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="#conceito">O que é?</a></li>
+                    <li><a href="#praticas">Boas Práticas</a></li>
+                    <li><a href="#ferramentas">Ferramentas</a></li>
+                </ul>
+            </nav>
+            <button id="btn-contraste" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+        </div>
+    </header>
+
+    <main id="conteudo-principal" tabindex="-1">
+        
+        <section id="conceito" class="container">
+            <h2>O que é Acessibilidade Visual?</h2>
+            <p>
+                A acessibilidade visual na web consiste em criar páginas digitais de forma que pessoas com diferentes níveis de visão — incluindo cegueira, baixa visão e daltonismo — consigam navegar, compreender e interagir com o conteúdo sem barreiras.
+            </p>
+        </section>
+
+        <section id="praticas" class="container">
+            <h2>Principais Boas Práticas</h2>
+            <div class="cards-grid">
+                
+                <article class="card">
+                    <h3>1. Texto Alternativo (ALT)</h3>
+                    <p>Descrever o conteúdo das imagens permite que leitores de tela leiam a descrição para usuários com deficiência visual.</p>
+                </article>
+
+                <article class="card">
+                    <h3>2. Alto Contraste</h3>
+                    <p>Garantir uma diferença clara entre a cor do texto e a cor do fundo para facilitar a leitura.</p>
+                </article>
+
+                <article class="card">
+                    <h3>3. Design Responsivo e Zoom</h3>
+                    <p>O layout não deve "quebrar" quando o usuário aumenta o tamanho da fonte no navegador em até 200%.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="ferramentas" class="container">
+            <h2>Ferramentas de Apoio</h2>
+            <ul>
+                <li><strong>Leitores de Tela:</strong> Softwares como NVDA e TalkBack que transformam texto em voz.</li>
+                <li><strong>Checadores de Contraste:</strong> Ferramentas que validam a legibilidade do texto (padrão WCAG).</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Trabalho Escolar sobre Acessibilidade Web.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btnContraste = document.getElementById('btn-contraste');
+        btnContraste.addEventListener('click', () => {
+            document.body.classList.toggle('alto-contraste');
+        });
+    </script>
+</body>
+</html>
